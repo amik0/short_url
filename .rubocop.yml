@@ -1,0 +1,43 @@
+# Extensions
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-factory_bot
+
+Rails:
+  Enabled: true
+
+Performance:
+  Enabled: true
+
+RSpec:
+  Enabled: true
+
+# Global
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+
+# Style
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 35
+  Exclude:
+    - 'Gemfile'
+    - 'config/environments/**/*'
+  AllowedMethods:
+    - included
+
+# Rails
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# RSpec
+RSpec/MultipleExpectations:
+  Max: 5
